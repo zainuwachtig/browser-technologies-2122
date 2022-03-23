@@ -66,6 +66,7 @@ div {
     border-left: 2px solid white;
     background: #c0c0c0;
     width: 20rem;
+    height: 20rem;
 }
 
 div h2 {
@@ -85,9 +86,13 @@ section {
     position: sticky;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     top: 15rem;
     margin-top: 10rem;
+}
+
+section:nth-of-type(2) img {
+    opacity: 0;
 }
 
 section img {
@@ -111,6 +116,11 @@ footer ul {
     height: 4rem;
 }
 
+footer li {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
 footer a {
     font-size: 0.9rem;
     padding: 5px 10px;
@@ -120,5 +130,5 @@ footer a {
     border-left: 2px solid white;
     text-decoration: none;
     color: #000;
-    margin-left: 1rem;
+    font-weight: normal;
 }
