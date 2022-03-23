@@ -43,7 +43,7 @@ header img {
     pointer-events: none;
 }
 
-marquee {
+h1 {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     color: #00ff00;
     -webkit-text-stroke: 3px #ff04e6;
