@@ -62,7 +62,8 @@ div p {
 footer {
 	border-top: 2px solid #efefef;
 	background-color: rgba(192, 192, 192, 100);
-	position: absolute;
+	position: relative;
+	margin-top: 5em;
 	bottom: 0;
 	width: 100%;
 }
