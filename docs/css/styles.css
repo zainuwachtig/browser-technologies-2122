@@ -16,12 +16,21 @@ body {
 header {
 	width: 100vw;
 	background-color: rgba(192, 192, 192, 100);
-	display: grid;
-	place-items: top center;
+	display: flex;
+	/* display: grid;
+	place-items: top center; */
 	border-top: 2px solid white;
 	border-right: 2px solid #222;
 	border-bottom: 2px solid #222;
 	border-left: 2px solid white;
+	align-items: center;
+	/* justify-content: space-evenly; */
+}
+header img {
+	height: 6rem;
+	width: 25rem;
+	margin-left: 5rem;
+	margin-right: 2rem;
 }
 
 h1 {
