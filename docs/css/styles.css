@@ -22,6 +22,7 @@ header {
 	border-right: 2px solid #222;
 	border-bottom: 2px solid #222;
 	border-left: 2px solid white;
+  height: 10vh;
 }
 
 h1 {
@@ -33,6 +34,9 @@ h1 {
 }
 
 main {
+  height: 80vh;
+  overflow-y: scroll;
+  /* position: relative; */
 	/* background-color: #8dc2fa; */
 }
 
@@ -59,19 +63,33 @@ div p {
 	padding: 0 0.75rem 0.75rem;
 }
 
+iframe {
+  width: 5em;
+  height: auto;
+  position: absolute;
+  right: 1em;
+  top: -5em;
+  border-style: none;
+}
+
 footer {
 	border-top: 2px solid #efefef;
 	background-color: rgba(192, 192, 192, 100);
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
+  margin-top: auto;
+  height: 10vh;
+}
+footer h2{
+  margin: 1rem 0 0 1rem;
 }
 
 footer ul {
 	display: flex;
 	list-style: none;
 	align-items: center;
-	height: 4rem;
+  height: 4rem;
 }
 
 footer a {
