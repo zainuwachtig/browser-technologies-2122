@@ -34,9 +34,10 @@ header img {
 }
 
 h1 {
-	font-family: "Comic Sans Ms";
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
 	color: #00ff00;
 	-webkit-text-stroke: 3px #ff04e6;
+	text-shadow: 10px 10px black;
 	margin: 0.5em;
 	font-size: 3em;
 }
@@ -66,6 +67,7 @@ div h2 {
 
 div p {
 	padding: 0 0.75rem 0.75rem;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 footer {
