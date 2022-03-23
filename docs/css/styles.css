@@ -68,6 +68,10 @@ footer {
   width: 100%;
 }
 
+footer h2 {
+	margin-left: 0.8em;
+}
+
 footer ul {
   display: flex;
   list-style: none;
