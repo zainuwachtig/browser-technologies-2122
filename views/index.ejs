@@ -1,0 +1,82 @@
+<%- include('partials/head'); %>
+<body>
+    <%- include('partials/header'); %>
+    <main>
+        <!-- Het t-shirt -->
+        <section>
+            <img src="img/tee.svg" alt="" width="250px">
+        </section>
+
+        <!-- De keuzes voor het t-shirt met aparte fieldsets voor de verschillende keuzes -->
+        <section>
+            <form action="/winkelmandje" method="POST">
+                <fieldset>
+                    <div class="keuze-wrapper">
+                        <input type="radio" id="kleur" name="custom-options">
+                        <label for="kleur">kleur</label>
+                    </div>
+                    <div class="keuze-wrapper">
+                        <input type="radio" id="tekst" name="custom-options">
+                        <label for="tekst">tekst</label>
+                    </div>
+                    <div class="keuze-wrapper">
+                        <input type="radio" id="maat" name="custom-options">
+                        <label for="maat">maat</label>
+                    </div>
+                    <div class="keuze-wrapper">
+                        <input type="radio" id="bestellen" name="custom-options">
+                        <label for="bestellen">bestellen</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="kleur-wrapper">
+                        <input type="radio" id="kleur-wit" name="kleur-options" value="wit" checked>
+                        <label for="kleur-wit">wit</label>
+                    </div>
+                    <div class="kleur-wrapper">
+                        <input type="radio" id="kleur-zwart" name="kleur-options" value="zwart">
+                        <label for="kleur-zwart">zwart</label>
+                    </div>
+                    <div class="kleur-wrapper">
+                        <input type="radio" id="kleur-geel" name="kleur-options" value="geel">
+                        <label for="kleur-geel">geel</label>
+                    </div>
+                    <div class="kleur-wrapper">
+                        <input type="radio" id="kleur-rood" name="kleur-options" value="rood">
+                        <label for="kleur-rood">rood</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <p>Maximaal 6 tekens</p>
+                    <input type="text" maxlength="6" name="text-options">
+                </fieldset>
+
+                <fieldset required>
+                    <div class="maat-wrapper">
+                        <input type="radio" id="maat-small" name="maat-options" value="small">
+                        <label for="maat-small">small</label>
+                    </div>
+                    <div class="maat-wrapper">
+                        <input type="radio" id="maat-medium" name="maat-options" value="medium" checked>
+                        <label for="maat-medium">medium</label>
+                    </div>
+                    <div class="maat-wrapper">
+                        <input type="radio" id="maat-large" name="maat-options" value="large">
+                        <label for="maat-large">large</label>
+                    </div>
+                    <div class="maat-wrapper">
+                        <input type="radio" id="maat-xlarge" name="maat-options" value="x-large">
+                        <label for="maat-xlarge">x-large</label>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <input type="submit" value="naar winkelmandje >">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
