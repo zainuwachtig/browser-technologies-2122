@@ -32,22 +32,115 @@ header a:hover {
 main section:first-of-type {
     display: flex;
     justify-content: center;
+    position: relative;
+}
+
+/* Achtergrond kleur van de tee */
+.st0 {
+    fill:#FFFFFF;
+}
+
+/* Kleur van de tee */
+.st1 {
+    fill:white;
+}
+
+main section:first-of-type h2 {
+    position: absolute
+}
+
+main section:last-of-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+form {
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 1em;
 }
 
 form fieldset {
     display: flex;
     justify-content: space-around;
+    border: none;
+    margin: 1em;
 }
 
 .keuze-wrapper,
 .kleur-wrapper,
+.text-wrapper,
 .maat-wrapper {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
 }
 
-input[type='submit'] {
+.kleur-wrapper label:first-of-type {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+}
+
+.kleur-wrapper label:first-of-type:focus, 
+.maat-wrapper label:first-of-type:focus,
+fieldset:last-of-type input:focus {
+    outline: 1px dotted black;
+    outline-offset: 2px;
+}
+
+.kleur-wrapper:nth-of-type(1) label:first-of-type {
+    background-color: #FFFFFF;
+    border: 1px solid black;
+}
+
+.kleur-wrapper:nth-of-type(2) label:first-of-type {
+    background-color: #000000;
+}
+
+.kleur-wrapper:nth-of-type(3) label:first-of-type {
+    background-color: #F7C41B;
+}
+
+.kleur-wrapper:nth-of-type(4) label:first-of-type {
+    background-color: #FC3C35;
+}
+
+.kleur-wrapper input:checked + label,
+.maat-wrapper input:checked + label  {
+    outline: 1px solid black;
+    outline-offset: 2px;
+}
+
+/* Verdwijnen van radio buttons */
+.kleur-wrapper input, 
+.maat-wrapper input {
+    opacity: 0;
+}
+
+/* Text op tee */
+.text-wrapper input {
+    border-radius: .5em;
+    border: 1px solid black;
+    padding: 0.5em;
+    width: 70%;
+}
+
+.maat-wrapper label:first-of-type {
+    border-radius: 50%;
+    border: 1px solid;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+}
+
+.maat-wrapper label:last-of-type {
+    font-size: 0.7em;
+}
+
+fieldset:last-of-type input[type='submit'] {
     padding: 1em;
     border-radius: 2em;
     border: none;
@@ -56,7 +149,22 @@ input[type='submit'] {
     transition: 0.3s;
 }
 
-input[type='submit']:hover {
+fieldset:last-of-type input[type='submit']:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+fieldset:last-of-type p {
+    align-self: center;
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        width: auto;
+    }
 }
