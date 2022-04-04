@@ -4,21 +4,19 @@ function changeColorOnTee(color) {
     const tee = document.querySelectorAll('.st1');
     
     tee.forEach((el) => {
-        el.style.fill = color
+        el.style.fill = color;
     })
 }
 
 // Gekozen kleur op de tee zien
 function getColorOnTee() {
-    const colorPicker  = document.querySelectorAll('fieldset:nth-of-type(2) input')
+    const colorPicker  = document.querySelectorAll('fieldset:nth-of-type(2) input');
     
     colorPicker.forEach((color) => {
         color.addEventListener('change', (e) => {
-            // Value tekst is in engels zodat css die herkent
-            changeColorOnTee(e.target.value)
+            changeColorOnTee(e.target.value);
         })
-    })
-    
+    }) 
 }
 
 // Ingevoerde tekst op de tee zien
@@ -31,5 +29,5 @@ function getTextOnTee() {
     })
 }
 
-getColorOnTee()
-getTextOnTee()
+getColorOnTee();
+getTextOnTee();

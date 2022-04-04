@@ -1,8 +1,9 @@
 <%- include('partials/head'); %>
     <%- include('partials/header'); %>
-    <main>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve" width="250px">
+    <main class="winkelmandje">
+        <section>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve" width="150px">
    <g>
        <path class="st0" d="M39.56,0c18.76,0,37.53,0,56.29,0c0,33.33,0,66.67,0,100c-15.51,0-31.02,0-46.53,0
            c0.31-0.03,0.61-0.06,0.92-0.08c1.55-0.12,3.12-0.18,4.66-0.38c2.97-0.38,5.76-1.43,8.53-2.51c3.99-1.57,7.93-3.27,12.27-3.67
@@ -181,6 +182,14 @@
            c0.41,0.16,0.81,0.33,1.21,0.52c0.16,0.08,0.3,0.21,0.49,0.34c-0.4,0.35-0.8,0.26-1.16,0.16c-0.89-0.23-1.8-0.46-2.65-0.79
            c-4.35-1.7-8.59-3.67-12.75-5.8c-0.32-0.16-0.6-0.38-0.9-0.57C22.89,83.44,22.92,83.36,22.96,83.28z"/>
    </g>
-   </svg>
+            </svg>
+            <div>
+                <h3><%= info["kleur"] %></h3>
+                <p><%= info["kleur"] %></p>
+                <p><%= info["maat"] %></p>
+            </div>
+        </section>
+
+    <a href="/" class="nieuw-shirt">+</a>
     </main>
 <%- include('partials/footer');  %> 

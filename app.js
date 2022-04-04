@@ -4,7 +4,7 @@ const fs = require('fs')
 const app = express();
 
 const hostname = '127.0.0.1';
-const port = 5505;
+const port = 5000;
 
 // Body parser
 app.use(express.json())
@@ -19,9 +19,32 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/winkelmandje', (req, res) => {
+    console.log('hoi')
+    fs.readFile('voorhees.json', 'utf8', function (err, data) {
+        if (err) throw err;
+        let info = JSON.parse(data);
+        console.log(info)
+  
+        res.render('winkelmandje', {
+            info
+        });
+    });
+});
+
 app.post('/winkelmandje', (req, res) => {
-    res.render('winkelmandje');
-    console.log(req['body']['kleur-options'], req['body']['maat-options'], req['body']['text-options'])
+    userInput = JSON.stringify({ kleur: req['body']['kleur-options'], maat: req['body']['maat-options'], tekst: req['body']['text-options'] })
+    console.log(userInput)
+
+    fs.writeFile('voorhees.json', userInput, 'utf8', cb => {
+		console.log('werk dan');
+	});
+
+    res.redirect('winkelmandje')
+    // const info = userInput
+    // res.render('winkelmandje', {
+    //     info
+    // });
 });
 
 app.listen(port, hostname, () => {

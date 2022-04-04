@@ -32,6 +32,7 @@ header a:hover {
 main section:first-of-type {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 
@@ -81,6 +82,7 @@ form fieldset {
     width: 1em;
     height: 1em;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .kleur-wrapper label:first-of-type:focus, 
@@ -134,6 +136,7 @@ fieldset:last-of-type input:focus {
     height: 2em;
     line-height: 2em;
     text-align: center;
+    cursor: pointer;
 }
 
 .maat-wrapper label:last-of-type {
@@ -147,6 +150,7 @@ fieldset:last-of-type input[type='submit'] {
     background-color: var(--color-main);
     margin: 1em;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 fieldset:last-of-type input[type='submit']:hover {
@@ -158,10 +162,29 @@ fieldset:last-of-type p {
     align-self: center;
 }
 
+
+/* Winkelmandje */
+a.nieuw-shirt {
+    color: var(--color-main);
+    text-decoration: none;
+    border: 1px solid var(--color-main);
+    line-height: 2em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
 @media screen and (min-width: 992px) {
     main {
         display: flex;
         justify-content: center;
+    }
+
+    .winkelmandje {
+        flex-direction: column;
     }
 
     form {
