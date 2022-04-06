@@ -168,6 +168,13 @@ fieldset:last-of-type input[type='submit']:hover, .afrekenen-btn:hover {
     transition: 0.3s;
 }
 
+.afrekenen-btn {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 2em;
+}
+
 fieldset:last-of-type p {
     align-self: center;
 }

@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/winkelmandje', (req, res) => {
-    console.log('hoi')
     fs.readFile('voorhees.json', 'utf8', function (err, data) {
         if (err) throw err;
         let info = JSON.parse(data);
