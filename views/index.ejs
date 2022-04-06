@@ -189,26 +189,7 @@
 
         <!-- De keuzes voor het t-shirt met aparte fieldsets voor de verschillende keuzes -->
         <section>
-            <form action="/winkelmandje" method="POST">
-                <fieldset>
-                    <div class="keuze-wrapper">
-                        <input type="radio" id="kleur" name="custom-options">
-                        <label for="kleur">kleur</label>
-                    </div>
-                    <div class="keuze-wrapper">
-                        <input type="radio" id="tekst" name="custom-options">
-                        <label for="tekst">tekst</label>
-                    </div>
-                    <div class="keuze-wrapper">
-                        <input type="radio" id="maat" name="custom-options">
-                        <label for="maat">maat</label>
-                    </div>
-                    <div class="keuze-wrapper">
-                        <input type="radio" id="bestellen" name="custom-options">
-                        <label for="bestellen">bestellen</label>
-                    </div>
-                </fieldset>
-
+            <form action="/winkelmandje" method="POST" id="shirt-customize">
                 <fieldset>
                     <div class="kleur-wrapper">
                         <input type="radio" id="kleur-wit" name="kleur-options" value="#FFFFFF" checked>

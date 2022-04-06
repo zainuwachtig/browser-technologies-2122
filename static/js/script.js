@@ -10,7 +10,7 @@ function changeColorOnTee(color) {
 
 // Gekozen kleur op de tee zien
 function getColorOnTee() {
-    const colorPicker  = document.querySelectorAll('fieldset:nth-of-type(2) input');
+    const colorPicker  = document.querySelectorAll('fieldset:nth-of-type(1) input');
     
     colorPicker.forEach((color) => {
         color.addEventListener('change', (e) => {

@@ -1,0 +1,26 @@
+<%- include('partials/head'); %>
+    <%- include('partials/header'); %>
+    <main>
+        <form action="" id="afrekenen">
+            <label for="email">e-mail:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="voornaam">voor- en achternaam:</label>
+            <input type="text" required>
+
+            <label for="achternaam">adres (straat + huisnummer)</label>
+            <input type="text" required>
+
+            <label for="stad">stad</label>
+            <input type="text" required>
+
+            <label for="postcode">postcode:</label>
+            <input type="text" required>
+
+            <label for="land">land</label>
+            <input type="text" placeholder="Nederland" disabled> 
+
+            <input type="submit" value="afrekenen >">
+        </form>
+    </main>
+<%- include('partials/footer'); %>

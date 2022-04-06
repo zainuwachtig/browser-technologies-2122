@@ -11,6 +11,7 @@
 
 header {
     display: flex;
+    display: -ms-flexbox;
     justify-content: space-between;
     padding: 2em 3em;
 }
@@ -31,6 +32,7 @@ header a:hover {
 
 main section:first-of-type {
     display: flex;
+    display: -ms-flexbox;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -52,18 +54,20 @@ main section:first-of-type h2 {
 
 main section:last-of-type {
     display: flex;
+    display: -ms-flexbox;
     justify-content: center;
     margin-top: 4em;
 }
 
-form {
+#shirt-customize {
     width: 70%;
     border: 1px solid black;
     border-radius: 1em;
 }
 
-form fieldset {
+#shirt-customize fieldset {
     display: flex;
+    display: -ms-flexbox;
     justify-content: space-around;
     border: none;
     margin: 1em;
@@ -76,6 +80,10 @@ form fieldset {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
+}
+
+.text-wrapper {
+    margin: 0 auto;
 }
 
 .kleur-wrapper label:first-of-type {
@@ -143,7 +151,7 @@ fieldset:last-of-type input:focus {
     font-size: 0.7em;
 }
 
-fieldset:last-of-type input[type='submit'] {
+fieldset:last-of-type input[type='submit'], .afrekenen-btn {
     padding: 1em;
     border-radius: 2em;
     border: none;
@@ -151,9 +159,11 @@ fieldset:last-of-type input[type='submit'] {
     margin: 1em;
     transition: 0.3s;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
-fieldset:last-of-type input[type='submit']:hover {
+fieldset:last-of-type input[type='submit']:hover, .afrekenen-btn:hover {
     transform: scale(1.1);
     transition: 0.3s;
 }
@@ -175,6 +185,51 @@ a.nieuw-shirt {
     display: block;
     margin: 0 auto;
     text-align: center;
+    margin-top: 2em;
+}
+
+.winkelmandje section {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.winkelmandje section svg {
+    padding: 1em;
+    border: 1px solid black;
+    height: 7em;
+    width: 7em;
+}
+
+.winkelmandje input[type="number"] {
+    width: 3em;
+    text-align: center;
+    border: 1px solid;
+}
+
+/* Afrekenen */
+#afrekenen {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#afrekenen input {
+    padding: 0.3em;
+    border-radius: 0.3em;
+    border: 1px solid black;
+    margin-bottom: 1.5em;
+}
+
+#afrekenen input[type="submit"] {
+    background-color: #f06419;
+    border: none;
+    padding: 1em;
+    border-radius: 2em;
+    width: 40%;
+    align-self: flex-end;
 }
 
 @media screen and (min-width: 992px) {
@@ -187,7 +242,16 @@ a.nieuw-shirt {
         flex-direction: column;
     }
 
+    #shirt-customize {
+        width: 100%;
+    }
+
     form {
         width: auto;
+    }
+
+    .afrekenen-btn {
+        width: 10%;
+        text-align: center;
     }
 }

@@ -41,10 +41,14 @@ app.post('/winkelmandje', (req, res) => {
 	});
 
     res.redirect('winkelmandje')
-    // const info = userInput
-    // res.render('winkelmandje', {
-    //     info
-    // });
+});
+
+app.get('/afrekenen', (req, res) => {
+    res.render('afrekenen');
+});
+
+app.get('/bevestiging', (req, res) => {
+    res.render('bevestiging');
 });
 
 app.listen(port, hostname, () => {
