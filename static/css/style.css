@@ -106,7 +106,7 @@ fieldset:last-of-type input:focus {
 }
 
 .kleur-wrapper:nth-of-type(2) label:first-of-type {
-    background-color: #000000;
+    background-color: #dcdedb;
 }
 
 .kleur-wrapper:nth-of-type(3) label:first-of-type {
@@ -194,7 +194,26 @@ a.nieuw-shirt {
     padding: 1em;
 }
 
-.winkelmandje section svg {
+.winkelmandje section div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#prullenbak {
+    width: 1.3em;
+    background-color: white;
+    border: none;
+    margin-top: 1em;
+}
+
+#prullenbak:hover {
+    fill: #FC3C35;
+}
+
+#winkelmandje-tee {
     padding: 1em;
     border: 1px solid black;
     height: 7em;

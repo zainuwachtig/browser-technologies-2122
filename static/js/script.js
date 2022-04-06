@@ -14,7 +14,9 @@ function getColorOnTee() {
     
     colorPicker.forEach((color) => {
         color.addEventListener('change', (e) => {
-            changeColorOnTee(e.target.value);
+            const label = e.target.nextSibling.nextSibling
+            // getComputedStyle haalt de desbetreffende backgroundcolor van het label
+            changeColorOnTee(getComputedStyle(label).backgroundColor);
         })
     }) 
 }

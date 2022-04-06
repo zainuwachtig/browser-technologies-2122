@@ -34,10 +34,9 @@ app.get('/winkelmandje', (req, res) => {
 
 app.post('/winkelmandje', (req, res) => {
     userInput = JSON.stringify({ kleur: req['body']['kleur-options'], maat: req['body']['maat-options'], tekst: req['body']['text-options'] })
-    console.log(userInput)
 
     fs.writeFile('voorhees.json', userInput, 'utf8', cb => {
-		console.log('werk dan');
+		console.log(userInput)
 	});
 
     res.redirect('winkelmandje')
