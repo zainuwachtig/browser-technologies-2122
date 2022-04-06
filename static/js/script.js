@@ -30,6 +30,32 @@ function getTextOnTee() {
         textTee.textContent = this.value;
     })
 }
-console.log(document.querySelector("#Layer_2"))
+
+// Local storage
+// https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available
+function checkLocalStorage(){
+    const test = 'test';
+    try {
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+if(checkLocalStorage() === true){
+    const localStorageOptions = document.querySelectorAll('#shirt-customize input[type="text"], #shirt-customize input[type="radio"]');
+    localStorageOptions.forEach((option) => {
+        option.addEventListener('change', (e) => {
+            const key = e.target.name;
+            const value = e.target.value;
+            localStorage.setItem(key, value);
+        })
+    })
+}else{
+    console.log('localStorage is uitgeschakeld!')
+}
+
 getColorOnTee();
 getTextOnTee();
