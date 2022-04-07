@@ -2,25 +2,26 @@
     <%- include('partials/header'); %>
     <main>
         <form action="bevestiging" id="afrekenen">
-            <label for="email">e-mail:</label>
-            <input type="email" required>
+            <label for="email">e-mail</label>
+            <input type="email" required placeholder="john@voorbeeld.com">
 
-            <label for="voornaam">voor- en achternaam:</label>
-            <input type="text" required>
+            <label for="voornaam">voor- en achternaam</label>
+            <input type="text" required placeholder="John Co">
 
             <label for="achternaam">adres (straat + huisnummer)</label>
-            <input type="text" required>
+            <input type="text" required placeholder="Wibautstraat 2">
 
             <label for="stad">stad</label>
-            <input type="text" required>
+            <input type="text" required placeholder="Amsterdam">
 
-            <label for="postcode">postcode:</label>
-            <input type="text" required>
+            <label for="postcode">postcode</label>
+            <input type="text" required placeholder="1091GM">
 
             <label for="land">land</label>
             <input type="text" placeholder="Nederland" disabled> 
 
-            <input type="submit" value="afrekenen >">
+            <input type="submit" value="betalen >">
         </form>
     </main>
-<%- include('partials/footer'); %>
+</body>
+</html>

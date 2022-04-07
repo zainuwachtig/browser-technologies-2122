@@ -36,9 +36,9 @@ if(checkLocalStorage() === true){
     const sizeLocalStorage = localStorage.getItem('maat-options');
 
     if(colorLocalStorage !== null) {
-        document.querySelector(`input[value=${colorLocalStorage}]`).checked = true;
+        document.querySelector(`input[value='${colorLocalStorage}']`).checked = true;
         // Dit nog fixen
-        // changeColorOnTee('pink')
+        changeColorOnTee(`${colorLocalStorage}`)
     }
 
     if(textLocalStorage !== null) {

@@ -3,7 +3,7 @@ const fs = require('fs')
 
 const app = express();
 
-const hostname = '127.0.0.1';
+const hostname = '10.0.1.18';
 const port = 5000;
 
 // Body parser
@@ -40,6 +40,11 @@ app.post('/winkelmandje', (req, res) => {
 
     res.redirect('winkelmandje')
 });
+
+app.post('/winkelmandjeLegen', (req, res) => {
+    userInput = JSON.parse(fs.readFileSync('voorhees.json'))
+    res.redirect('winkelmandje')
+})
 
 app.get('/afrekenen', (req, res) => {
     res.render('afrekenen');

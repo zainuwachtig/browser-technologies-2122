@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    -webkit-appearance: none
 }
 
 :root {
@@ -14,6 +15,7 @@ header {
     display: -ms-flexbox;
     justify-content: space-between;
     padding: 2em 3em;
+    align-items: center;
 }
 
 header a {
@@ -23,6 +25,12 @@ header a {
     border: 1px solid var(--color-main);
     border-radius: 2em;
     transition: 0.4s;
+}
+
+header a:last-of-type {
+    width: 3em;
+    height: 3em;
+    line-height: 1;
 }
 
 header a:hover {
@@ -93,9 +101,7 @@ main section:last-of-type {
     cursor: pointer;
 }
 
-.kleur-wrapper label:first-of-type:focus, 
-.maat-wrapper label:first-of-type:focus,
-fieldset:last-of-type input:focus {
+*:focus {
     outline: 1px dotted black;
     outline-offset: 2px;
 }
@@ -163,7 +169,9 @@ fieldset:last-of-type input[type='submit'], .afrekenen-btn {
     color: black;
 }
 
-fieldset:last-of-type input[type='submit']:hover, .afrekenen-btn:hover {
+fieldset:last-of-type input[type='submit']:hover, 
+.afrekenen-btn:hover, 
+#afrekenen input[type="submit"]:hover {
     transform: scale(1.1);
     transition: 0.3s;
 }
@@ -197,17 +205,24 @@ a.nieuw-shirt {
 
 .winkelmandje section {
     display: flex;
+    display: -ms-flexbox;
     justify-content: space-around;
     padding: 1em;
+    width: 75%;
 }
 
 .winkelmandje section div:first-of-type {
     display: flex;
+    display: -ms-flexbox;
     flex-direction: column;
     align-items: center;
 }
 
-
+.winkelmand-tee {
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+}
 
 #prullenbak {
     width: 1.3em;
@@ -247,6 +262,7 @@ a.nieuw-shirt {
     border-radius: 0.3em;
     border: 1px solid black;
     margin-bottom: 1.5em;
+    margin-top: 0.4em;
 }
 
 #afrekenen input[type="submit"] {
@@ -256,16 +272,41 @@ a.nieuw-shirt {
     border-radius: 2em;
     width: 40%;
     align-self: flex-end;
+    transition: 0.2s;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3em;
+}
+
+#opnieuw-maken button {
+    background-color: #FFFFFF;
+    border: none;
+    display: block;
+    margin: 1em auto;
+}
+
+#opnieuw-maken svg {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    fill: var(--color-main);
 }
 
 @media screen and (min-width: 992px) {
     main {
         display: flex;
+        display: -ms-flexbox;
         justify-content: center;
     }
 
     .winkelmandje {
         flex-direction: column;
+    }
+
+    .winkelmandje section {
+        width: 100%;
     }
 
     #shirt-customize {
@@ -274,6 +315,10 @@ a.nieuw-shirt {
 
     form {
         width: auto;
+    }
+
+    #afrekenen {
+        width: 40%;
     }
 
     .afrekenen-btn {
