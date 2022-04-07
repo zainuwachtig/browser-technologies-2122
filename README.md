@@ -32,13 +32,19 @@ Er is bewust gekozen om de gebruiker **niet** meerdere t-shirts te laten bestell
 De laag met de core functionaliteiten, een t-shirt bestellen en afrekenen. Dit moet mogelijk zijn op (vrijwel) iedere browser. Deze laag bestaat uit een html `form` waarin de keuzes voor het t-shirt gegroepeerd zijn in een `fieldset`. Deze data wordt door middel van de node server opgeslagen in een JSON file. Vervolgens wordt de gebruiker geleid naar het winkelmandje, zodat de gebruiker kan checken of alles naar wens is. Ten slotte kan de gebruiker afrekenen, weer door middel van een `form` met duidelijke foutmeldingen voor ieder device (oudere browsers ondersteunen niet de ingebakken HTML `required` attribuut).
 Wanneer alles juist is krijgt de gebruiker een bevestiging.
 
+![HTML](https://user-images.githubusercontent.com/74155415/162223875-78eddf4e-7661-42de-9238-219d9fa9b4a5.png)
+
 ### Usable layer
 
 De laag met CSS, hiermee wordt de algehele gebruikerservaring verbeterd. Ook maakt deze het laag de website wat fijner voor de ogen van de gebruiker. Dit wordt gedaan door kleur en worden de fieldsets gegroepeerd voor het customizen van je shirt, zodat alles makkelijk in één oogopslag te zien is. Verder is het duidelijk welke opties voor het shirt gekozen is door de gekozen optie een `outline` met een `outline-offset` mee te geven.
 
+![HTML & CSS](https://user-images.githubusercontent.com/74155415/162224531-36af5210-1262-49a2-87de-4da7d97f26c7.png)
+
 ### Pleasurable layer
 
 Last but not least, de laag met client-side javascript. Dit geeft de mogelijkheid voor de gebruiker om de keuzes direct op het t-shirt te zien. Ook heb ik localStorage gebruikt zodat de gebruiker weer verder kan waar die mee gebleven was, bijvoorbeeld wanneer die per ongeluk het tabblad sluit. Ik gebruik localStorage als pleasurable laag, want wanneer die bijvoorbeeld is uitgeschakeld kan de gebruiker geen t-shirt bestellen.
+
+![HTML, CSS en JS](https://user-images.githubusercontent.com/74155415/162224728-730d20f0-71aa-4305-bbff-b2224f190715.png)
 
 ## Testverslag
 
@@ -73,20 +79,20 @@ Als niet chromium browser (WebKit) heb ik voor Safari gekozen, de standaard brow
 
 Verbazingwekkend ging alles goed op deze telefoon, alle functies werkten en het zag er precies zo uit als op desktop.
 
-![Chrome op de Samsung Note 4](https://user-images.githubusercontent.com/74155415/162217010-cdffdafb-801c-48de-96f5-e6a5b71ee3bd.png)
+<img src="https://user-images.githubusercontent.com/74155415/162217010-cdffdafb-801c-48de-96f5-e6a5b71ee3bd.png" alt="Chrome op de Samsung Note 4" width="200"/>
 
 #### iPhone 13 | Safari
 
 Net zoals op Safari en de Samsung Note is er geen outline border. Ook werden de buttons een soort plat gedrukt maar door een `-webkit-appearance: none` werden ze weer normaal.
 
-![Safari op de iPhone 13](https://user-images.githubusercontent.com/74155415/162218031-4fdbc805-af90-4d0e-b577-2b23b4b0cf36.PNG)
+<img src="https://user-images.githubusercontent.com/74155415/162218031-4fdbc805-af90-4d0e-b577-2b23b4b0cf36.PNG" alt="Safari op de iPhone 13" width="200"/>
 
 ### Wat word wel en niet ondersteund?
 
 Twee dingen die ik graag gebruik zijn custom variables en `aspect-ratio`. Met custom variables kan ik gemakkelijk de kleuren aanpassen van de buttons, helaas word dit op de Nokia Lumia niet ondersteund en zie je dus geen kleur. Dat vind ik geen ramp, want de site is nog steeds werkzaam.
 `aspect-ratio` gebruik ik voor bijvoorbeeld rondjes zodat je steeds maar 1 waarde hoeft te definiëren (`height` of `width`) en dus minder hoeft aan te passen. Ook dit wordt helaas niet goed ondersteund op de Lumia, maar dit is wel een probleem want als je zowel geen width als height meegeeft aan een element, is het niet zichtbaar. Hier moest ik dus van afstappen.
 
-Wat mij wel verbaasde was dat `display: flex` nog wel aardig ondersteund werd ook op de oudere devices. Ik had hier stiekem al op gehoopt omdat ik al het positioneren met flexbox doe en anders zou moeten werken met `margin` en `padding` op alles.
+Wat mij wel verbaasde was dat `display: flex` nog wel aardig ondersteund werd ook op de oudere devices. Ik had hier stiekem al op gehoopt omdat ik al het positioneren met flexbox doe en anders zou moeten werken met `margin` en `padding` op alles. Wel is het van belang om er `-ms-flexbox` voor te zetten voor de oudere IE versies.
 
 ### Welke functionaliteiten heb ik uitgeschakeld?
 
