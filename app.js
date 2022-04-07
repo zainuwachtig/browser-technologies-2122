@@ -4,7 +4,7 @@ const fs = require('fs')
 const app = express();
 
 const hostname = '10.0.1.18';
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Body parser
 app.use(express.json())
