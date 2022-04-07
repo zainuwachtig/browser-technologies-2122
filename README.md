@@ -17,7 +17,7 @@ Je kan:
 [x] in het winkelmandje kijken of je de juiste keuze hebt gemaakt.
 [x] 'afrekenen'.
 
-Er is bewust gekozen om de gebruiker **niet** meerdere t-shirts te laten bestellen. Ook is er voor gekozen **niet** verder te gaan met een 'opgeslagen' ontwerp, de drie opties op het t-shirt kan prima opnieuw ingevuld worden en zou alleen maar veel ruimte opnemen in de database.
+Er is bewust gekozen om de gebruiker **niet** meerdere t-shirts te laten bestellen, als de gebruiker meerdere gepersonaliseerde t-shirts wil, kan hij meerdere aparte bestellingen plaatsen.
 
 ## Progressive Enhancement
 
@@ -32,7 +32,7 @@ De laag met CSS, hiermee wordt de algehele gebruikerservaring verbeterd. Ook maa
 
 ### Pleasurable layer
 
-Last but not least, de laag met client-side javascript. Dit geeft de mogelijkheid voor de gebruiker om de keuzes direct op het t-shirt te zien.
+Last but not least, de laag met client-side javascript. Dit geeft de mogelijkheid voor de gebruiker om de keuzes direct op het t-shirt te zien. Ook heb ik localStorage gebruikt zodat de gebruiker weer verder kan waar die mee gebleven was, bijvoorbeeld wanneer die per ongeluk het tabblad sluit. Ik gebruik localStorage als pleasurable laag, want wanneer die bijvoorbeeld is uitgeschakeld kan de gebruiker geen t-shirt bestellen.
 
 ## Geteste browsers
 

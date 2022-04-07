@@ -191,9 +191,8 @@
             </svg>
             <div>
                 <% if(info["tekst"] !== ""){ %>
-                    <p>tekst:
-                        <i><%= info["tekst"] %></i>
-                    </p> <% } else{ %>
+                    <p>tekst: <%= info["tekst"] %></p> 
+                <% } else{ %>
                     <p>tekst: <i>geen</i></p>
                 <% } %>
                 <p>kleur: <%= info["kleur"] %></p>
